@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tech chetta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <link rel="icon" href="resource/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="resource/favicon.ico" type="image/x-icon">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    /* Logo Image */
+    .logo img {
+      height: 50px;   /* adjust size here */
+      width: auto;
+    }
+
+    .nav-links a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #d30404;
+    }
+
+    /* Video Banner */
+    .video-container {
+      margin-top: 0px;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Blank Section */
+    .content {
+      height: 100px;
+      background: #eb0029;
+      margin-bottom: 20px;
+    }
+
+        /* Body Section */
+   .contents {
+    margin: 20px;
+}
+
+    /* Footer */
+    .footer-up {
+      background: #000000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px ;
+
+}
+
+.footer-left h3 {
+    margin: 0 0 10px;
+}
+
+.footer-center a, .footer-right a {
+    color: #fff;
+    margin: 0  5px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-center a:hover, .footer-right a:hover {
+    color: #d30404;
+}
+
+.footer-right .social {
+    font-weight: bold;
+}
+
+.card-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 50px;
+  background: #f5f5f5;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
+
+
+h2 {
+      text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #2c3e50;
+}
+
+/* Calculator Container */
+.calculator-container {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Sub heading */
+.sideheading {
+    text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #eb0029;
+  font-weight: bold;
+}
+
+/* Input */
+input {
+  width: 50%;
+  padding: 10px;
+  margin: 0 auto 15px auto; /* centers horizontally */
+  display: block; /* required for margin auto to work */
+  border: 1px solid #be0020;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Button */
+button {
+    text-align: center;
+  font-weight: bold;
+  background-color: #eb0029;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  width: 50%;
+  cursor: pointer;
+   margin: 0 auto 15px auto; /* centers horizontally */
+  display: block; /* required for margin auto to work */
+}
+
+button:hover {
+  background-color: #be0020;
+}
+
+/* Result */
+.result {
+      text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Table */
+.rate-table {
+  margin: 30px auto;
+  width: 90%;
+  max-width: 700px;
+  border-collapse: collapse;
+}
+
+.rate-table th, .rate-table td {
+      text-align: center;
+  /* font-weight: bold; */
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.rate-table th {
+  background-color: #eb0029;
+  color: #fff;
+}
+
+.rate-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+ /* Responsive Nav -----*/
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 15px;
+    border-top: 1px solid #eee;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+.nav-links {
+  transition: all 0.3s ease;
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="resource/logo.png" alt="Logo">  <!-- Replace with your PNG file -->
+    </div>
+ <!-- Responsive Nav -->
+     <div class="menu-toggle" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="Services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </div>
+  </div>
+
+    <!-- Blank White Section -->
+  <div class="content"> </div>
+
+  <div class="contents">
+
+<h2>TNEB Electricity Bill Calculator 2026</h2>
+
+<div class="calculator-container">
+  <div class="sideheading">Tariff Plan - Domestic (Low Tension Supply)</div>
+
+  <input type="number" id="units" placeholder="Enter units" required>
+  <br>
+  <button onclick="calculateBill()">Calculate</button>
+
+  <div id="result" class="result"></div>
+</div>
+
+<!-- Rate Table -->
+<table class="rate-table">
+<thead>
+<tr>
+  <th>Units Range</th>
+  <th>Units</th>
+  <th>Rate (₹)</th>
+  <th>Amount (₹)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>0-100</td><td>100</td><td>0.00</td><td>Free</td></tr>
+<tr><td>101-400</td><td>300</td><td>4.70</td><td>1,410</td></tr>
+<tr><td>401-500</td><td>100</td><td>6.30</td><td>630</td></tr>
+<tr><td>501-600</td><td>100</td><td>8.40</td><td>840</td></tr>
+<tr><td>601-800</td><td>200</td><td>9.45</td><td>1,890</td></tr>
+<tr><td>801-1000</td><td>200</td><td>10.50</td><td>2,100</td></tr>
+<td>1001-1100</td><td>100</td><td>11.55</td><td>1,155</td>
+</tbody>
+</table></div></br></br></br></br></br></br></br>
+  </div>
+
+  <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+              <div class="logo">
+      <img src="resource/f_logo.png" alt="Logo">  <!-- Replace with your PNG file -->
+    </div>
+            </div>
+            <div class="footer-center">
+
+            </div>
+            <div class="footer-right">
+               <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>© 2026 Tech Chetta | All Rights Reserved</p>
+  </div>
+</footer>
+
+<script>
+  
+  function calculateBill() {
+  const units = document.getElementById("units").value;
+  let cost  = 0.0;
+
+  if (units <= 100) {                                                         //0-100
+    cost  = 0; // Free for the first 100 units
+  } else if (units <= 200) {                                                  //101-200
+    cost  = (units - 100) * 2.35;
+  } else if (units <= 400) {                                                  //201-400
+    cost  = ((units - 200) * 4.70) + 235.00 ;
+  } else if (units <= 500) {
+    cost  = ((units - 400) * 6.30) + 235.00 + 940.00 ;             //401-500
+  } else if (units <= 600) {
+    cost  = ((units - 500) * 8.40)+ 1410.00 + 630.00 ;             //501-600
+  } else if (units <= 800) {
+    cost  = ((units - 600) * 9.45)+ 1410.00 + 630.00 + 840.00;             //601-800
+  } else if (units <= 1000) {
+    cost  = ((units - 800) * 10.50)+ 1410.00 + 630.00 + 840.00 + 1890.00;             //801-1000
+  } else {
+    cost  = ((units - 1000) * 11.55)+ 1410.00 + 630.00 + 840.00 + 1890.00 + 2100.00;            // 1000 above
+  }
+  document.getElementById("result").innerHTML = 
+      `Total Bill: ₹${cost.toFixed(2)}`;
+}
+
+
+  /* Hamburger */
+  function toggleMenu() {
+  const nav = document.getElementById("navLinks");
+  nav.classList.toggle("active");
+}
+</script>
+</script>
+</body>
+
+</html>
