@@ -70,53 +70,117 @@
       background: white;
     }
 
-    /* Footer */
-    .footer-up {
-      background: #000000;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-    .footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    footer {
-    background-color: #222;
-    color: #fff;
-    padding: 20px 0;
+/* Footer */
+.footer {
+    background: #0d0f14;
+    color: #ccc;
+    padding: 40px 60px 20px;
 }
 
-.footer-container {
-    max-width: 1000px;
-    margin: 0 auto;
+/* Top section */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Left side */
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 600px;
+}
+
+.footer-left img {
+    width: 80px;
+    height: 55px;
+}
+
+.footer-text h3 {
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.footer-text p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Social icons */
+.footer-right {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-right a {
+    color: #fff;
+    background: #1a1d23;
+    padding: 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.footer-right a:hover {
+    background: #ff0000;
+}
+
+/* Bottom */
+.footer-bottom {
+    border-top: 1px solid #222;
+    margin-top: 30px;
+    padding-top: 15px;
+
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0 20px ;
-
+    gap: 10px;
+    font-size: 14px;
 }
 
-.footer-left h3 {
-    margin: 0 0 10px;
+/* Links */
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-.footer-center a, .footer-right a {
-    color: #fff;
-    margin: 0  5px;
+.footer-links a {
+    color: #ccc;
     text-decoration: none;
-    transition: color 0.3s;
 }
 
-.footer-center a:hover, .footer-right a:hover {
-    color: #d30404;
+.footer-links a:hover {
+    color: #ff0000;
 }
 
-.footer-right .social {
-    font-weight: bold;
+/* Responsive */
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 20px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-left {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-right {
+        margin-top: 10px;
+    }
 }
 
 .card-section {
@@ -235,22 +299,22 @@
 
   <!-- Card Section -->
 <div class="card-section">
-  <div class="card" onclick="openLink('https://techchetta.github.io/tech-chetta/page1.html')">
-    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEieEdXlvX0AktbfuL4bOIuuMmWcr6KnuHYpQYHm_pFrD_rD3AI1mOwT9LAMszR4D4xsya3KaP54VBFjYdUtk2cJ8KyksnVWMTQzw5eAm5ZDDpIcqGH2MDBhlI24piLp5956C9n9LATxXdwFHjjFyHu_spRNC2kyIKn0hveQTe6sHeXHuf11rpy6mk3044E/s6067/1page.jpg">
-    <div class="card-text">TNEB 2026 Calculator</div>
+  <div class="card" onclick="openLink('http://127.0.0.1:5500/Techchetta/page1.html')">
+    <img src="resource/1page.jpg">
+    <div class="card-text">TN EB 2026 Calaculator</div>
   </div>
 
-  <div class="card" onclick="openLink('https://techchetta.github.io/tech-chetta/page2.html')">
-    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjAgCG_QkrY-4XXZSwJks4Scs3_p6nAR8U8Iqro-tMYKQiGukv5L4cQWsQnWupSgaqisqCMmLeYny0fYQP6jsKkO-e9etx06yXj6jPznHDGql08gh0M24HkK0v7_PeCFTEpy0S-05lPUg4j7nMw0iOpUC2kl0nJtbG6EuQltOgII9ISWxHJRQfKLEAe3t4/s7999/2page.jpg">
+  <div class="card" onclick="openLink('http://127.0.0.1:5500/Techchetta/page2.html')">
+    <img src="resource/2page.jpg">
     <div class="card-text">QR Code Scan creator</div>
   </div>
 
-  <div class="card" onclick="openLink('https://techchetta.github.io/tech-chetta/page3.html')">
-    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEikB2fpjryXYJL8Nh_05HITCLADW1aToWOR8VlODwPcum7wziOTa9OSe5W5ZQScJDyvMMC8-k3euq8UAlNGm8FZWFEkiVfgixdPtrvfLp9aTCjGyBPSxKC7m5Rhdq4UCOOFiPIfZZTI2Zw7nUIbSw6BZ65CL4OiiANM4cAkrcywMHhRjF7erNt0qBC9kw8/s1000/2147880777.jpg">
+  <div class="card" onclick="openLink('http://127.0.0.1:5500/Techchetta/page3.html')">
+    <img src="resource/3page.jpg">
     <div class="card-text">Mind Magic Trick</div>
   </div>
 
-  <div class="card" onclick="openLink('https://techchetta.github.io/tech-chetta/error.html')">
+  <div class="card" onclick="openLink('http://127.0.0.1:5500/Techchetta/error.html')">
     <img src="resource/tumb.png">
     <div class="card-text">Coming Soon</div>
   </div>
@@ -268,31 +332,48 @@
   nav.classList.toggle("active");
 }
 </script>
-
 </body>
- <!-- Footer -->
+   <!-- Footer -->
+<footer class="footer">
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-left">
-              <div class="logo">
-      <img src="resource/f_logo.png" alt="Logo">  <!-- Replace with your PNG file -->
-    </div>
-            </div>
-            <div class="footer-center">
 
-            </div>
-            <div class="footer-right">
-               <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
+    <div class="footer-top">
+
+        <!-- Left -->
+        <div class="footer-left">
+            <!-- Replace with your logo -->
+            <img src="resource/f_logo.png" alt="logo">
+
+            <div class="footer-text">
+                <h3>ABOUT US</h3>
+                <p>Tech Chetta, a tech based website developed by Arvin N V.</p>
             </div>
         </div>
 
-  <!-- Footer -->
-  <div class="footer">
-    <p>© 2026 Tech Chetta | All Rights Reserved</p>
-  </div>
+        <!-- Right Social Icons -->
+        <div class="footer-right">
+            <a href="https://www.facebook.com/techchetta/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@techchetta"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/techchetta"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com/techchetta"><i class="fab fa-x-twitter"></i></a>
+        </div>
+
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="footer-bottom">
+        <div>
+            Design by <span style="color:#b10101;">Techchetta</span> | Copyright 2026
+        </div>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="Services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+            <a href="#">Version v1.1</a>
+        </div>
+    </div>
+
 </footer>
 </html>
