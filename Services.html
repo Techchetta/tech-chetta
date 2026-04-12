@@ -16,6 +16,7 @@
       padding: 0;
       box-sizing: border-box;
       font-family: 'Roboto', sans-serif;
+     
     }
 
     /* Navbar */
@@ -53,14 +54,13 @@
    .content {
       height: 70px;
       background: #eb0029;
-      margin-bottom: 20px;
+      margin-bottom: 0px;
 }
 
 .bannertitle {
   height: 200px;
   /*  background: #eb0029; */
   background: linear-gradient(90deg, #ca0000, #000000, #7e1300);
-  margin-bottom: 20px;
   display: flex;
   align-items: center;      /* vertical center */
   justify-content: center;  /* horizontal center */
@@ -76,21 +76,9 @@
     /* Body Section */
    .contents {
     margin: 20px;
+   
 }
 
-    /* Footer */
-    .footer-up {
-      background: #000000;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-    .footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
 
 .video-grid {
   display: grid;
@@ -123,39 +111,117 @@
   transition: 0.3s;
 }
 
-footer {
-    background-color: #222;
-    color: #fff;
-    padding: 20px 0;
+/* Footer */
+.footer {
+    background: #0d0f14;
+    color: #ccc;
+    padding: 40px 60px 20px;
 }
 
-.footer-container {
-    max-width: 1000px;
-    margin: 0 auto;
+/* Top section */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Left side */
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 600px;
+}
+
+.footer-left img {
+    width: 80px;
+    height: 55px;
+}
+
+.footer-text h3 {
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.footer-text p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Social icons */
+.footer-right {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-right a {
+    color: #fff;
+    background: #1a1d23;
+    padding: 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.footer-right a:hover {
+    background: #ff0000;
+}
+
+/* Bottom */
+.footer-bottom {
+    border-top: 1px solid #222;
+    margin-top: 30px;
+    padding-top: 15px;
+
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0 20px ;
-
+    gap: 10px;
+    font-size: 14px;
 }
 
-.footer-left h3 {
-    margin: 0 0 10px;
+/* Links */
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-.footer-center a, .footer-right a {
-    color: #fff;
-    margin: 0  5px;
+.footer-links a {
+    color: #ccc;
     text-decoration: none;
-    transition: color 0.3s;
 }
 
-.footer-center a:hover, .footer-right a:hover {
-    color: #d30404;
+.footer-links a:hover {
+    color: #ff0000;
 }
 
-.footer-right .social {
-    font-weight: bold;
+/* Responsive */
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 20px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-left {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-right {
+        margin-top: 10px;
+    }
 }
 
     .logos img {
@@ -304,28 +370,47 @@ footer {
 </body>
 
 
-  <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-left">
-              <div class="logo">
-      <img src="resource/f_logo.png" alt="Logo">  <!-- Replace with your PNG file -->
-    </div>
-            </div>
-            <div class="footer-center">
+    <!-- Footer -->
+<footer class="footer">
 
-            </div>
-            <div class="footer-right">
-               <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
+
+    <div class="footer-top">
+
+        <!-- Left -->
+        <div class="footer-left">
+            <!-- Replace with your logo -->
+            <img src="resource/f_logo.png" alt="logo">
+
+            <div class="footer-text">
+                <h3>ABOUT US</h3>
+                <p>Tech Chetta, a tech based website developed by Arvin N V.</p>
             </div>
         </div>
 
-  <!-- Footer -->
-  <div class="footer">
-    <p>© 2026 Tech Chetta | All Rights Reserved</p>
-  </div>
+        <!-- Right Social Icons -->
+        <div class="footer-right">
+            <a href="https://www.facebook.com/techchetta/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@techchetta"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/techchetta"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com/techchetta"><i class="fab fa-x-twitter"></i></a>
+        </div>
+
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="footer-bottom">
+        <div>
+            Design by <span style="color:#b10101;">Techchetta</span> | Copyright 2026
+        </div>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="Services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+            <a href="#">Version v1.1</a>
+        </div>
+    </div>
+
 </footer>
 </html>
