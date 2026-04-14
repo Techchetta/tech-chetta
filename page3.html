@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-   <link rel="icon" href="resource/favicon.ico" type="image/x-icon">
+ <link rel="icon" href="resource/favicon.ico" type="image/x-icon">
 <link rel="shortcut icon" href="resource/favicon.ico" type="image/x-icon">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,12 @@
       padding: 0;
       box-sizing: border-box;
       font-family: 'Roboto', sans-serif;
+    }
+
+    h3 {
+      padding: 30px;
+      color: #d60202;
+
     }
 
     /* Navbar */
@@ -411,6 +417,35 @@ td {
   0% { opacity: 0.3; transform: scale(1); }
   100% { opacity: 1; transform: scale(1.2); }
 }
+
+.bannertitle {
+  height: 200px;
+  /*  background: #eb0029; */
+  background: linear-gradient(90deg, #ca0000, #000000, #7e1300);
+  display: flex;
+  align-items: center;      /* vertical center */
+  justify-content: center;  /* horizontal center */
+}
+
+.bannertitle h3 {
+  color: white;
+  font-size: xx-large;
+  font-weight: bold;
+  margin: 0;   /* remove extra spacing */
+}
+
+.bannertitle h1 {
+  color: #ca0000;
+  font-size: xx-large;
+  font-weight: bold;
+  margin: 0;   /* remove extra spacing */
+}
+
+    /* Body Section */
+   .contents {
+    margin: 20px;
+   
+}
 </style>
 </head>
 
@@ -438,8 +473,12 @@ td {
   <!-- Blank White Section -->
   <div class="content">
 
+        <!-- Banner Title Section -->
+  <div class="bannertitle"><h3>Mind Reading Trick</h3></div>
+
 <!-- Content -->
 <div class="content">
+  <h3>Think a number between (1-100) and select the cards which has your number. Then press the submit button to see the magic</h3>
   <div class="tables-container" id="tables"></div>
 
   <div class="submit-container">
@@ -451,7 +490,7 @@ td {
 </div>
   </div>
 </div>
-     </div>
+</div>
 
 <script>
 // Binary values
