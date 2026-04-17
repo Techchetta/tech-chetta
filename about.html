@@ -65,6 +65,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 50px;
 }
 
 /* Card */
@@ -299,7 +300,6 @@
 /* Container */
 .brands-container {
   display: flex;
-  padding: 10px;
   justify-content: center;
   align-items: center;
   gap: 30px;
@@ -353,6 +353,66 @@
   }
 }
 
+/* Banner */
+.banner {
+  position: relative;
+  height: 500px;
+  background: #d30404; /* red background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Background Text */
+.banner-text {
+  position: absolute;
+  font-size: 250px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.185); /* faded behind */
+  text-align: center;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+/* Center Image */
+.banner-img {
+  position: relative;
+  width:auto;
+  height: 100%;
+  border-radius: 0%;
+  object-fit: cover;
+  /* border removed */
+  z-index: 2;
+  shape-outside: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.banner-text {
+  padding: 0 10px;
+  text-align: center;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .banner-text {
+    font-size: 195px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .banner-text {
+    font-size: 140px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .banner-text {
+    font-size: 122px;
+  }
+}
+
   </style>
 </head>
 
@@ -375,16 +435,23 @@
       <a href="about.html">About</a>
     </div>
   </div>
+<!-- Banner Section -->
+<div class="banner">
+  
+  <!-- Background Text -->
+  <h1 class="banner-text">ARVIN</h1>
 
+  <!-- Center Image -->
+ <img src="resource/phototransp.png" alt="Profile" class="banner-img">
 
-  <!-- Blank White Section -->
-  <div class="content">
+</div>
 
 <div class="about-container">
 
+  
   <div class="profile-card">
     
-    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhx5FdyEwfVLQeZVTg8ACQDSdpzkkvBVXkxaG5oQEjaBFoQbR3pFOmT0W2cz0d9TpafD7Y06u1GF-FK8hy1gb98HLcAyWKZ1h2mD56evHcvvhav_mpKcQzoAJ2y_5NeOdeovrt8_yBe8sfYbNGQEaBbKm1ASNrVEelRTggagZsnFPJxZxeipDevXREWmC0/s6274/photo.jpg" alt="My Photo" class="profile-img">
+      <!-- <img src="resource/photo.JPG" alt="My Photo" class="profile-img"> -->
 
     <h2>Arvin N V</h2>
     <p class="title">Tech Chetta • Web Developer</p>
@@ -395,15 +462,19 @@
 
     <!-- Social Icons -->
     <div class="social-icons">
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
-      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/techchetta"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/techchetta/"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.reddit.com/r/techchetta/"><i class="fab fa-reddit"></i></a>
+      <a href="https://www.youtube.com/@techchetta"><i class="fab fa-youtube"></i></a>
+      <a href="https://github.com/Techchetta"><i class="fab fa-github"></i></a>
+      <a href="https://techchetta.blogspot.com/"><i class="fab fa-blogger"></i></a>
+      <a href="https://x.com/techchetta"><i class="fab fa-x-twitter"></i></a>
+     
     </div>
 
     <!-- Skills -->
     <div class="skills">
-      <span>#TECHCHETTA</span>
+      <span><b>chetta.tech@gmail.com</b></span>
 
     </div>
   </div>
@@ -414,6 +485,7 @@
 <div class="brands-section">
   <h2 class="brands-title">Brands</h2>
 
+
   <div class="brands-container">
     <div class="brand-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhlhttuCUxAb4TEFIYoBf2CLkH9vBr7HMAIrilV3JAMMON8eMe5mWDXHW52ZdEo74mA6F9Bn3mHs9wPocfvIfD04orX6UnwwK5GqzFBvMyh9ooFPUssM7ccaaxc-DPhiT6zJuSZI0eIpZUWeWeZSP6NygR56WcvCFBgmb5pIHRfG3MRXCXpQuItw4sJeyc/s1920/1.png" alt="Brand 1"></div>
     <div class="brand-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhL-SLQa-bHXmwvRF4APPiP1xfBdBdQdvjRGyjsNPA-Fziihyphenhyphen7eEkOUvQerwVrqr81FhGcX-T87OTF05xrBV8yc0OxBENboPNNBGzb2KK3oAaKHBuxQu0qMrZCbZ_2xnymTLfTQfnK3EjCdtOFb3dmwVkuTAzouF9HkppwynnLSe75J15WPHw0rNkbeix0/s1920/2.png" alt="Brand 2"></div>
@@ -421,6 +493,7 @@
     <div class="brand-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiuY6MszcspsOE8cf6sqXqxqnv8A-23dD0BXT8DKRAWBeGuxnUt0UF7KAGaOu7xGxLhKm5_S-ojimJ2iWL8tPEOv_9K3Ri0X3cjtixkVFYalg07WZdBuEifXop1fGCT2Vm6mVy17308w5Fx9k8_3ip1yxKiE6f3UNbUEQ-VmRgD7ONK8r-_Lylp8JXrPYI/s1920/4.png" alt="Brand 4"></div>
     <div class="brand-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiBCgsRQU5ZHekCGXvJlP5ukweudMJ1lGaqRrsg3WoF737DYAFPzThxdO4HlmYdimVNwCkIGaLVruof0kZJiApvl0sgDBYHkCa0OBNgEtaFLQb0tmba56KweRkllIbEKEw5UKDQv4qEJKsYZBRHd7r3P8El-bWXd4e8oFETzAupagXEW18YGOwUUYg9ZJs/s1920/5.jpg" alt="Brand 5"></div>
   </div>
+</div>
 </div>
 
   <script>
@@ -454,10 +527,11 @@
             <a href="https://www.facebook.com/techchetta/"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.youtube.com/@techchetta"><i class="fab fa-youtube"></i></a>
             <a href="https://www.instagram.com/techchetta"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.twitter.com/techchetta"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://x.com/techchetta"><i class="fab fa-x-twitter"></i></a>
         </div>
 
     </div>
+  
 
     <!-- Bottom Section -->
     <div class="footer-bottom">
